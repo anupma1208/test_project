@@ -21,7 +21,7 @@ steps:
 - task: UiPathTest@5
   inputs:
     testTarget: 'TestSet'
-    orchestratorConnection: 'New_uipath'
+    orchestratorConnection: 'new_uipath1'
     testSet: 'yu'
     folderName: 'anupma'
     testReportDestination: '$(Build.ArtifactStagingDirectory)\Output.xml'
