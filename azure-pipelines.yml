@@ -27,4 +27,4 @@ steps:
     testReportDestination: '$(Build.ArtifactStagingDirectory)\Output.xml'
     traceLevel: 'Verbose'
     attachRobotLogs: true
-    additionalArguments: '--headers "Accept=application/json;Content-Type=application/json"'
+    additionalArguments: '--api-version v3'
