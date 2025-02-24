@@ -23,9 +23,17 @@ steps:
 - task: UiPathTest@5
   inputs:
     testTarget: 'TestSet'
-    orchestratorConnection: 'new_uipath1'
-    testSet: 'YU'
+    orchestratorConnection: 'Uipath Orch'
+    testSet: '$(Build.ArtifactStagingDirectory)\TestCase.xaml'
     folderName: 'anupma'
     testReportDestination: '$(Build.ArtifactStagingDirectory)\Output'
     traceLevel: 'Verbose'
     attachRobotLogs: true
+- task: UiPathPack@5
+  inputs:
+    versionType: 'AutoVersion'
+    projectJsonPath: '$(Build.SourcesDirectory)\project.json'
+    outputType: 'Tests'
+    orchestratorConnection: 'Uipath Orch'
+    outputPath: '$(Build.ArtifactStagingDirectory)\Output'
+    traceLevel: 'Verbose'
