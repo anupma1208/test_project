@@ -24,7 +24,7 @@ steps:
   inputs:
     testTarget: 'TestSet'
     orchestratorConnection: 'Uipath Orch'
-    testSet: '$(Build.ArtifactStagingDirectory)\TestCase.xaml'
+    testSet: 'yu'
     folderName: 'anupma'
     testReportDestination: '$(Build.ArtifactStagingDirectory)\Output'
     traceLevel: 'Verbose'
