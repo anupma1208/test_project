@@ -20,7 +20,6 @@ steps:
 - task: UiPathInstallPlatform@5
   inputs:
     cliVersion: 'WIN_24.12.9166.24491'
-    cliNupkgPath: '"D:\test_project"'
 - task: UiPathTest@5
   inputs:
     orchestratorConnection: 'new_uipath1'
