@@ -22,10 +22,10 @@ steps:
     cliVersion: 'WIN_24.12.9166.24491'
 - task: UiPathTest@5
   inputs:
-    orchestratorConnection: 'new_uipath1'
     testTarget: 'TestSet'
-    testSet: 'yu'
+    orchestratorConnection: 'new_uipath1'
+    testSet: 'YU'
     folderName: 'anupma'
-    testReportDestination: 'output/result'
+    testReportDestination: '$(Build.ArtifactStagingDirectory)\Output'
+    traceLevel: 'Verbose'
     attachRobotLogs: true
-    enablePackageMetadata: true
